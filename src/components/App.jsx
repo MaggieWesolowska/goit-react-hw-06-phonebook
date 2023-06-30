@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
-import { nanoid } from 'nanoid';
 import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 import css from './ContactForm/ContactForm.module.css';
-import { addContact } from '../slices/phonebookSlice';
+import {
+  addContact,
+  deleteContact,
+  setFilter,
+} from '../slices/phonebookSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 export const App = () => {
@@ -12,16 +15,6 @@ export const App = () => {
   const { contacts, filter } = useSelector(
     state => state.phonebook
   );
-
-  const setContacts = () => {};
-  const setFilter = () => {};
-
-  useEffect(() => {
-    const lsData = localStorage.getItem('contactList');
-    if (lsData) {
-      setContacts(JSON.parse(lsData));
-    }
-  }, []);
 
   useEffect(() => {
     localStorage.setItem(
@@ -32,7 +25,11 @@ export const App = () => {
 
   const handleChange = e => {
     const { value } = e.target;
-    setFilter(value);
+    dispatch(
+      setFilter({
+        filter: value,
+      })
+    );
   };
 
   const handleSubmit = e => {
@@ -46,9 +43,11 @@ export const App = () => {
     );
   };
 
-  const handleDelete = e => {
-    setContacts(
-      contacts.filter(contact => contact.id !== e)
+  const handleDelete = id => {
+    dispatch(
+      deleteContact({
+        id,
+      })
     );
   };
 
