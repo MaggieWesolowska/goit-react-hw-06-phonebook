@@ -90,12 +90,12 @@ export const App = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#010101',
+        color: '#333',
         background: '#D9DDDc',
         margin: 20,
-        borderRadius: 5,
+        borderRadius: 10,
       }}>
-      <h1 className={css.header}>Phonebook📱</h1>
+      <h1 className={css.header}>Phonebook</h1>
       <ContactForm handleSubmit={handleSubmit} />
       <h2 className={css.contacts}>Contacts</h2>
       <Filter filter={filter} handleChange={handleChange} />
