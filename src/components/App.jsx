@@ -94,6 +94,7 @@ export const App = () => {
         background: '#D9DDDc',
         margin: 20,
         borderRadius: 10,
+        paddingBottom: 30,
       }}>
       <h1 className={css.header}>Phonebook</h1>
       <ContactForm handleSubmit={handleSubmit} />
