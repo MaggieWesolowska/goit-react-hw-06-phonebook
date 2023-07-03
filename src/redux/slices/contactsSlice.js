@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import { loadLocalStorage } from '../../utils/loadLocalStorage';
 
 const slice = createSlice({
-  name: 'phonebook',
+  name: 'contactsSlice',
   initialState: {
     contacts: loadLocalStorage(),
     filter: '',
