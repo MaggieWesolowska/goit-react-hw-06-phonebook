@@ -6,15 +6,18 @@ import css from './ContactForm/ContactForm.module.css';
 import {
   addContact,
   deleteContact,
-  setFilter,
-} from '../slices/phonebookSlice';
+} from '../redux/slices/contactsSlice';
+import { setFilter } from '../redux/slices/filterSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import {
+  selectContacts,
+  selectFilters,
+} from '../redux/selectors/selectors';
 
 export const App = () => {
   const dispatch = useDispatch();
-  const { contacts, filter } = useSelector(
-    state => state.phonebook
-  );
+  const { contacts } = useSelector(selectContacts);
+  const { filter } = useSelector(selectFilters);
 
   useEffect(() => {
     localStorage.setItem(

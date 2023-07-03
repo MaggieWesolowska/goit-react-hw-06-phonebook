@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import phonebook from './slices/phonebookSlice';
+import contactsSlice from './slices/contactsSlice';
+import filterSlice from './slices/filterSlice';
 import { combineReducers } from 'redux';
 
 const reducers = combineReducers({
-  phonebook,
+  contactsSlice,
+  filterSlice,
 });
 export const store = configureStore({
   reducer: reducers,
