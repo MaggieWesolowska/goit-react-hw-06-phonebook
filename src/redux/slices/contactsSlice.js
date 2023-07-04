@@ -2,8 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 import { nanoid } from 'nanoid';
 import { loadLocalStorage } from '../../utils/loadLocalStorage';
 
-const slice = createSlice({
-  name: 'contactsSlice',
+const contactsSlice = createSlice({
+  name: 'contacts',
   initialState: {
     contacts: loadLocalStorage(),
     filter: '',
@@ -35,5 +35,6 @@ const slice = createSlice({
   },
 });
 
-export default slice.reducer;
-export const { addContact, deleteContact } = slice.actions;
+export default contactsSlice.reducer;
+export const { addContact, deleteContact } =
+  contactsSlice.actions;
