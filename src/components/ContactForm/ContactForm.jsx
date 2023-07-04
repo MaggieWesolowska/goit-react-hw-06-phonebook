@@ -28,6 +28,7 @@ export const ContactForm = ({ handleSubmit }) => {
     <form className={css.form} onSubmit={handleFormSubmit}>
       <label className={css.formLabel}>Name </label>
       <input
+        className={css.formInput}
         type='text'
         name='name'
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -39,6 +40,7 @@ export const ContactForm = ({ handleSubmit }) => {
       />
       <label className={css.formLabel}>Number </label>
       <input
+        className={css.formInput}
         type='tel'
         name='number'
         pattern='\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}'

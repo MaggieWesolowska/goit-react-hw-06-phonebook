@@ -3,11 +3,14 @@ import css from './Filter.module.css';
 
 export const Filter = ({ filter, handleChange }) => (
   <div>
-    <label className={css.formLabel}>Find contacts by name</label>
+    <label className={css.formLabel}>
+      Find contacts by name
+    </label>
     <input
-      type="text"
-      name="filter"
-      placeholder="Enter filter"
+      className={css.filterInput}
+      type='text'
+      name='filter'
+      placeholder='Enter filter'
       value={filter}
       onChange={handleChange}
     />
