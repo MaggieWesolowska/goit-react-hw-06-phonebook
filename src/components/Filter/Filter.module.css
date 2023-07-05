@@ -7,15 +7,17 @@
 
 .filterInput {
   width: 50vw;
-  background: lightblue;
+  background: lightgray;
   font-size: 15px;
-  border: 1px solid gray;
+  border: 1px solid white;
   border-radius: 5px;
   padding: 10px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0px 4px 4px white);
 
   &:hover,
   &:focus {
     background-color: white;
+    border: 1px solid lightgrey;
   }
 }
