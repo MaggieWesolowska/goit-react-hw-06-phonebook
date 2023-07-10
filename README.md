@@ -1,6 +1,7 @@
 # goit-react-hw-06-phonebook
 Built with Vite and deployed via GitHub Actions
 
+<<<<< Phonebook - code refactoring using Redux >>>>>
 
 Contact book
 Refactor the "Contact Book" application code by adding state control using the [Redux Toolkit] library (https://redux-toolkit.js.org/). Let the Redux state look like this.
